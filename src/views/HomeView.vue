@@ -23,7 +23,7 @@ export default {
 <style>
 .home {
   height: calc(100vh - 72px);
-  background-image: url("C:\Users\Delta.co\Documents\search-meals\src\assets\pexels-ella-olsson-1640773.jpg");
+  background-image: url("/src/assets/pexels-ella-olsson-1640773.jpg");
   background: cover;
   background-size: cover;
   background-repeat: no-repeat;
