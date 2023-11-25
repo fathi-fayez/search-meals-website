@@ -1,14 +1,12 @@
 <!-- eslint-disable -->
 <template>
-  <div>
-    <h1 class="text-center m-4">Search Meals</h1>
+  <div class="page">
+    <h1 class="text-center">Search Meals</h1>
     <div class="d-flex justify-content-center">
       <input
         v-model="keyword"
         class="w-50"
         type="text"
-        name=""
-        id=""
         placeholder="Search For Meals"
         @keyup.enter="searchMeals"
       />
@@ -41,6 +39,7 @@
 </template>
 <!-- eslint-disable -->
 <script>
+import router from "@/router";
 // import Store from "vuex";
 import store from "../store";
 export default {
@@ -61,5 +60,29 @@ export default {
   computed: {
     meals: () => store.state.searchedMeals,
   },
+  mounted() {
+    // console.log(this.$route.params.name);
+    this.keyword = this.$route.params.name;
+    if (this.keyword) {
+      searchMeals();
+    }
+  },
 };
 </script>
+<!-- eslint-disable -->
+<style>
+.page {
+  background-image: url("/src/assets/pexels-ella-olsson-1640773.jpg");
+  background: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vb - 76px);
+}
+h1 {
+  padding: 20px;
+}
+button {
+  padding: 10px;
+  background-color: yellow;
+}
+</style>

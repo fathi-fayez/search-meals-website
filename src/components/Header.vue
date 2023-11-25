@@ -1,6 +1,6 @@
 <!-- eslint-disable -->
 <template>
-  <nav class="navbar navbar-expand-lg p-3">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <router-link to="/">
         <img
@@ -24,13 +24,8 @@
         class="collapse navbar-collapse justify-content-end"
         id="navbarNavAltMarkup"
       >
-        <div class="navbar-nav">
-          <router-link class="nav-link" aria-current="page" to="/"
-            >Home</router-link
-          >
-          <router-link class="nav-link" to="/SearchMeals"
-            >SearchMeals</router-link
-          >
+        <div class="navbar-nav gap-2">
+          <router-link class="nav-link" to="/">Meals By Name</router-link>
           <router-link class="nav-link" to="/byLetter"
             >Meals By Letter</router-link
           >
@@ -52,6 +47,9 @@ export default {
 <style>
 nav {
   background-color: rgb(247, 55, 2);
+}
+.nav-link {
+  font-weight: 500 !important;
 }
 nav .nav-link:hover {
   background-color: rgb(131, 131, 191);

@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
   <div>
-    <h1 class="text-center">MealsByLetter</h1>
+    <h1 class="text-center">Meals By Letter</h1>
     <div class="text-center m-4">
       <router-link
         class="p-2 text-white text-decoration-none bg-primary rounded-pill m-1"
@@ -24,7 +24,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
           deleniti laudantium at vel quia saepe beatae maxime.
         </p>
-        <div>
+        <div class="d-flex justify-content-between">
           <a :href="meal.strYoutube" target="_blank">YouTube</a>
           <router-link
             :to="{ name: 'mealDetails', params: { id: meal.idMeal } }"

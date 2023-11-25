@@ -12,6 +12,9 @@
     </ul>
     <h4 class="text-center">Instructions:</h4>
     <p class="container h3">{{ meal.strInstructions }}</p>
+    <a class="youtub_button" :href="meal.strYoutube" target="_blank"
+      >See On YouTube</a
+    >
   </div>
 </template>
 <!-- eslint-disable -->
@@ -32,3 +35,16 @@ export default {
   },
 };
 </script>
+<!-- eslint-disable -->
+<style>
+.youtub_button {
+  background-color: red;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  margin: 15px auto;
+  display: block;
+  width: fit-content;
+}
+</style>
