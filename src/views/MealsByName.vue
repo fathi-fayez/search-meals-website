@@ -12,10 +12,15 @@
       />
       <button class="rounded ms-2" @click="searchMeals">Search</button>
     </div>
-    <div>
-      <div class="row justify-content-center align-items-center">
-        <div
-          class="container text-center col-sm-6 col-md-2 bg-white shadow p-3 m-4 rounded hover:scale-105 transition-all"
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          sm="6"
+          md="2"
+          lg="3"
+          xl="3"
+          xxl="3"
           v-for="meal of meals"
           :key="meal.idMeal"
         >
@@ -32,9 +37,28 @@
               >View</router-link
             >
           </div>
-        </div>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- <div
+      class="container text-center col-sm-6 col-md-2 bg-white shadow p-3 m-4 rounded hover:scale-105 transition-all"
+      v-for="meal of meals"
+      :key="meal.idMeal"
+    >
+      <img class="img-fluid" :src="meal.strMealThumb" :alt="meal.strMeal" />
+      <h3>{{ meal.strMeal }}</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        deleniti laudantium at vel quia saepe beatae maxime.
+      </p>
+      <div class="d-flex justify-content-between">
+        <a :href="meal.strYoutube" target="_blank">YouTube</a>
+        <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }"
+          >View</router-link
+        >
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 <!-- eslint-disable -->
@@ -61,7 +85,6 @@ export default {
     meals: () => store.state.searchedMeals,
   },
   mounted() {
-    // console.log(this.$route.params.name);
     this.keyword = this.$route.params.name;
     if (this.keyword) {
       searchMeals();
