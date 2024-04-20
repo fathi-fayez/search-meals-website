@@ -30,7 +30,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             deleniti laudantium at vel quia saepe beatae maxime.
           </p>
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-space-between">
             <a :href="meal.strYoutube" target="_blank">YouTube</a>
             <router-link
               :to="{ name: 'mealDetails', params: { id: meal.idMeal } }"
